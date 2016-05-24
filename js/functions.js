@@ -885,6 +885,7 @@ var SEMICOLON = SEMICOLON || {};
 		stickyMenu: function( headerOffset ){
 			if ($window.scrollTop() > headerOffset) {
 				if( $body.hasClass('device-lg') || $body.hasClass('device-md') ) {
+					$("#logo").removeClass("hidden");
 					$('body:not(.side-header) #header:not(.no-sticky)').addClass('sticky-header');
 					$('#page-menu:not(.dots-menu,.no-sticky)').addClass('sticky-page-menu');
 					if( !$headerWrap.hasClass('force-not-dark') ) { $headerWrap.removeClass('not-dark'); }
@@ -898,6 +899,7 @@ var SEMICOLON = SEMICOLON || {};
 					SEMICOLON.header.removeStickyness();
 				}
 			} else {
+				$("#logo").addClass("hidden");
 				SEMICOLON.header.removeStickyness();
 			}
 		},
